@@ -84,3 +84,27 @@ Em caso de erro, será rejeitado o objeto com a mensagem de erro :
     erro: "Mensagem de erro"
 }
 ```
+
+## 🔎 Como encontrar os IDs dos campeonatos
+
+Para atualizar a tabela pela do ano atual, você pode descobrir o `idChampionship` diretamente no site do Terra:
+
+1. Acesse a página da tabela desejada  
+   👉 https://www.terra.com.br/esportes/futebol/brasileiro-serie-a/tabela/
+
+2. Abra o **DevTools** do navegador (F12)
+
+3. Vá até a aba **Network (Rede)**
+
+4. Recarregue a página
+
+5. Procure por requisições que contenham o termo:
+```
+
+idChampionship
+
+```
+
+6. O valor retornado será o ID da competição que você pode utilizar.
+
+💡 Dica: normalmente esse parâmetro aparece nas requisições XHR/Fetch usadas para carregar a tabela e as rodadas.
